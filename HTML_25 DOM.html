@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+<title>Навигация по документу</title>
+</head>
+<body>
+<h1>Изучение навигации по документу</h1>
+<p>Абзац 1</p>
+<p>Абзац 2</p>
+<script language = "JavaScript">
+var temp = document.documentElement;
+temp = temp.firstChild;
+alert(temp.tagName);
+if(temp.nextSibling == 3)
+temp = temp.nextSibling.next.Sibling;
+else
+temp = temp.nextSibling;
+alert(temp.tagName);
+temp = temp.firstChild;
+alert(temp.tagName);
+temp.style.color = "red";
+if(temp.nextSibling == 3)
+temp = temp.nextSibling.nextSibling;
+else
+temp = temp.nextSibling;
+alert(temp.tagName);
+temp.style.color = "blue";
+temp = temp.parentNode;
+alert(temp.tagName);
+</script>
+</body>
+</html>
